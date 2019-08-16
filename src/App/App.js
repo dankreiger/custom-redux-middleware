@@ -29,7 +29,7 @@ function App({ fetchTodos, toggleFlopping, flopping, items }) {
     <AppWrapper>
       <h1>{flopping ? 'floppy soft ears' : 'steif ears'}</h1>
       <button onClick={toggleFlopping}>Toggle Flopping</button>
-      <button className="fetch-comments" onClick={fetchTodos}>
+      <button className="fetch-todos" onClick={fetchTodos}>
         Fetch todos
       </button>
       <ul>{items && items.map(item => <li key={item.id}>{item.title}</li>)}</ul>
@@ -56,12 +56,13 @@ const mapStateToProps = ({ woofReducer }) => ({
   items: woofReducer.items
 });
 
-// const mapDispatchToProps = dispatch => ({
-//   toggleFlopping: () => dispatch({ type: 'TOGGLE_FLOPPING' }),
-//   fetchTodos: () => dispatch({ type: 'FETCH_TODOS' })
-// });
-
 export default connect(
   mapStateToProps,
   actions
 )(App);
+
+// /* just for reference again */
+// const mapDispatchToProps = dispatch => ({
+//   toggleFlopping: () => dispatch({ type: 'TOGGLE_FLOPPING' }),
+//   fetchTodos: () => dispatch({ type: 'FETCH_TODOS' })
+// });

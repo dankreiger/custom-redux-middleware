@@ -11,12 +11,16 @@ beforeEach(() => {
     status: 200,
     response: [
       {
+        id: 18726,
+        userId: 123,
         title: 'Fetched # 1',
-        id: 18726
+        body: 'Der Hund kann bellen'
       },
       {
+        id: 498479847,
+        userId: 124,
         title: 'Fetched # 2',
-        id: 498479847
+        body: 'Der Hund kann Pfötchen geben'
       }
     ]
   });
@@ -27,7 +31,7 @@ afterEach(() => {
   moxios.uninstall();
 });
 
-it('can fetch a list of comments and display them', done => {
+it('can fetch a list of todos and display them', done => {
   // Attempt to render the entire app
   const wrapped = mount(
     <Root>
@@ -35,12 +39,12 @@ it('can fetch a list of comments and display them', done => {
     </Root>
   );
 
-  // find the 'fetchComments' button and click it
-  wrapped.find('.fetch-comments').simulate('click');
+  // find the 'fetchTodos' button and click it
+  wrapped.find('.fetch-todos').simulate('click');
 
   // introduce a TINY pause
 
-  //Expect to find a list of comments
+  //Expect to find a list of todos
   moxios.wait(() => {
     wrapped.update();
 

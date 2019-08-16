@@ -1,3 +1,5 @@
+/* does the same thing as redux promise */
+
 export default ({ dispatch }) => next => action => {
   // Check to see if the action
   // has a promise on its 'payload' property
@@ -16,13 +18,3 @@ export default ({ dispatch }) => next => action => {
     dispatch(newAction);
   });
 };
-
-// /* ES5 */
-// export default function ({ dispatch }) {
-//   /*  next is a reference to the next middleware in line */
-//   return function(next) {
-//     return function(action) {
-
-//     }
-//   }
-// }
