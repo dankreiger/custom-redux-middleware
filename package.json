@@ -60,7 +60,7 @@
     "sort-package-json": "1.22.1"
   },
   "engines": {
-    "node": "12.8.0",
+    "node": "12.8.1",
     "yarn": "1.17.3"
   }
 }
