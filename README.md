@@ -1,5 +1,7 @@
 ### Small middleware examples
 
+[![Build Status](https://travis-ci.org/dankreiger/custom-redux-middleware.svg?branch=master)](https://travis-ci.org/dankreiger/custom-redux-middleware)
+
 Middleware format is:
 
 ```js
