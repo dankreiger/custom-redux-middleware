@@ -6,7 +6,10 @@ Middleware format is:
 
 ```js
 /* ES5 */
-var customMiddleware = function({ dispatch, getState }) {
+var customMiddleware = function(_ref) {
+  var dispatch = _ref.dispatch,
+      getState = _ref.getState;
+
   /* next is a reference to the next middleware in line */
   return function(next) {
     return function(action) {
