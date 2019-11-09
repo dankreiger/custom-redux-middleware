@@ -22,7 +22,7 @@ module.exports = customMiddleware;
 
 
 /* ES6 */
-export default ({ dispatch, getState }) => next => action {
+export default ({ dispatch, getState }) => next => action => {
   // middleware goes here
 }
 ```
