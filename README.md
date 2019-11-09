@@ -6,7 +6,7 @@ Middleware format is:
 
 ```js
 /* ES5 */
-export default function({ dispatch, getState }) {
+var customMiddleware = function({ dispatch, getState }) {
   /* next is a reference to the next middleware in line */
   return function(next) {
     return function(action) {
@@ -14,6 +14,8 @@ export default function({ dispatch, getState }) {
     };
   };
 }
+
+module.exports = customMiddleware;
 
 
 /* ES6 */
